@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class10A4 {
+            color: orange;
+            /* ai thuộc lớp này đều có thuộc tính là chữ màu da cam */
+        }
+
+        .chuTo {
+            /* .chuTo: là để gọi tới class đó code */
+            font-size: 30px;
+        }
+
+        /* cách style 1: nhóm các thẻ có thuộc tính giống nhau để mình style
+            Cách style2: định danh duy nhất 1 thẻ = id (id: là duy nhất)
+             */
+        #crush {
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- block: bị chặn -->
+    <h1 style="color: red;">Giới thiệu bản thân</h1>
+    <p>Họ tên: <span style="display: block;" class="class10A4 chuTo">Nguyễn Trung Hiếu</span> </p>
+    <p>Tuổi: <span class="class10A4">24</span></p>
+    <p>Trường: <span class="class10A4">ĐH Bách Khoa</span></p>
+    <p id="crush">Crush: Ngọc Trinh</p>
+
+    <!-- 
+        Buổi sau: khải niệm: Block, inline, inline-block
+
+        create website: HTML - CSS - Javascript (JS)
+     -->
+
+
+    <script>
+        //  code JS được viết tại đây: 
+        // JS: là 1 ngôn ngữ lập trình bậc cao.
+        // HTML: Là ngôn ngữ đánh dấu siêu văn bản
+        // CSS: Là ngôn ngữ trang trí.
+
+        // VD: về JS
+        /**
+         * Ngôn ngữ lập trình bao gồm:
+         * 1. Biến: để lưu trữ dữ liệu 
+         * */
+        //  Cú pháp khai báo biến:
+        // let x = 1;
+        // let y = 2;
+        // let z = x + y; // z = ?? 3|| dấu "=" không phải là dấu so sánh, mà là dấu gán giá trị (sao chép giá trị)
+        // console.log(z); // in ra bien "z" tren man hinh web
+
+        // // khai bao hằng số: const (là 1 số không bao giờ thay đổi);
+        // const Pi = 3.141514151415; // khai bao 1 hang so
+        // // Pi = 0;(sai) // hằng số không đc phép thay đổi giá trị ban đầu.
+        // console.log(Pi); // kq la??|| 0
+
+
+        /// Nhập vào số tuổi, kiếm tra nếu tuổi < 18: In ra dòng chữ "Em chưa 18"
+        // Nếu tuổi >18: In ra dòng chữ "Grow Up";
+        // Nếu tuổi bằng 18: In ra dòng chữ "I am 18"
+        let tranBinhMinh = 18; // 18 < 18 => sai
+        if (tranBinhMinh < 18) {
+            //  Nếu đk thỏa mãn => chạy lệnh nằm trong ngoặc nhọn
+            console.log("Em chưa 18");
+        }
+        if(tranBinhMinh == 18){ // Điều kiện con || ngang bằng với if|| "==": So sánh ngang bằng
+            console.log("I am 18");
+        }
+        else { // mặt khác 
+            // Nếu đk trên không thỏa mãn. Code sẽ chạy vào đây
+            console.log("Minh is Grow Up");
+        }
+
+
+        // Có if=> else if =>else if  => else
+
+    </script>
+</body>
+
+</html>

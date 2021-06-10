@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* gọi tới thẻ div để style cho toàn bộ thẻ div */
+        div {
+            border: red 1px solid;
+            padding: 40px;
+            /* Padding là gì:khoảng cách từ cạnh của thẻ tới nội dung thẻ  */
+            /* Padding: */
+
+            margin: 20px;
+            /* margin: khoảng cách giữa các thẻ */
+            width: 320px;
+        }
+
+
+        /* Gọi tới class đã tạo theo cú pháp:  .<tên class> */
+        /* .red{
+            color: red;
+        }
+
+        .gold{
+            color: gold;
+        } */
+
+        /* Gọi tới id đã tạo theo cú pháp:  #<tên id> */
+        /* #only{
+         color: hotpink;
+     } */
+
+        .relative {
+            position: relative;
+            left: 260px;
+            top: 260px;
+        }
+
+        /* 
+        Lưu ý: khi bù 1 vị trí với position: relative;, không gian nó(thẻ đc style) chiểm
+        không di chuyển, vị trí hiện tại của nó sẽ khiến thay đổi bố cục xung quanh, vị trí đó không đổi: 
+        Hiểu như: position: relative; giống như 1 nhân vật có khả năng di chuyển tự do, nhưng luôn liên quan
+        tới kết quả ban đầu.
+      */
+        .absolute {
+            position: absolute;
+            left: 260px;
+            top: 290px;
+            background: indianred;
+        }
+
+        /* 
+        Lưu ý;  position: absolute; trong CSS tác giúp định vị trị trí tuyệt dối cho thành phần theo bao ngoài: .;
+        Cụ thể hơn, thuộc tính absolute xác định tọa độ thành phần theo 1 thẻ cha relative (nếu có). Khả năng nó sẽ đi theo 
+        body toàn web
+         */
+        .fix {
+            margin-top: 0px;
+            text-align: center;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            background: rgb(42, 95, 95);
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- VD: về  class-->
+    <!-- <p class="red">Đây là màu đỏ</p>
+    <p class="gold">Đây là màu Vàng </p>
+    <p class="red">Đây là màu đỏ</p>
+    <p id="only" >Đây là màu tím</p> -->
+    <!-- 2 cái mình muốn màu đỏ (lý thuyết) => thuộc tính chung -->
+
+
+
+
+
+
+    <!-- VD về P:  Relaytive; -->
+    <div class="fix">Buổi học ngày thứ 3</div>
+
+    <div>Hôm nay học về Position</div>
+    <!-- cho thẻ div ở giữa 1 style là possition -->
+
+    <div>Ứng dụng với Position</div>
+
+
+    <!-- position: sticky; -->
+</body>
+
+</html>

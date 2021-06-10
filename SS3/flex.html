@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: black 1px solid;
+            min-height: 300px;
+            /*  height > luôn lớn hơn 300 px */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .box div{
+            /* lấy all thẻ div là con trực tiếp của class = "box" */
+            margin: 5px;
+            text-align: center;
+            background-color: #67d63f;
+        }
+
+        /* lấy 1 thẻ div đầu tiên là con trực tiếp của class = "box" */
+        .box div:nth-child(1){
+            /* lấy thành công con trực tiếp thứ 1 */
+            height: 70px;
+            width: 70px;
+            
+        }
+        .box div:nth-child(2){
+            /* lấy thành công con trực tiếp thứ 1 */
+            height: 50px;
+            width: 50px;
+        }
+        .box div:nth-child(3){
+            /* lấy thành công con trực tiếp thứ 1 */
+            height: 30px;
+            width: 30px;
+        }
+
+        .oder2{
+            order: 1;
+            /* order bao nhiêu -> tiến lên bấy nhiêu vị trí */
+        }
+
+        .oder3{
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- thẻ div cha dùng để style: flex => khiến các thẻ linh hoạt hơn -->
+    <div class="box">
+        <!-- con của thẻ div cha đó ... -->
+        <div>1</div>
+        <div class="oder2">2</div>
+        <div class="oder3">3</div>
+<!-- lẹnh copy code nhanh: alt + shift + mũi tên xuống -->
+    </div>
+</body>
+
+</html>
