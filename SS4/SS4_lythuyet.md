@@ -1,0 +1,2 @@
+- Luyện tập lại flex
+- Code 1 trang web cơ bản;
