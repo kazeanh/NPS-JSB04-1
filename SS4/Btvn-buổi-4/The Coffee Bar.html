@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en;">
+<meta charset="utf-8;">
+<meta http-equiv="X-UA-Compatible;" content="IE=edge;">
+<meta name="viewport;" content="width=device-width;" , initial-scale=1.0>
+
+<html>
+
+<hr>
+<title class="w3-animate-opacity">The coffee bar</title>
+
+<style>
+    .login {
+        display: inline-block;
+        margin-left: 450px;
+        font-size: 15px;
+        border: 3px gray solid;
+        background-color: #dddddd;
+        padding: 8px;
+        height: 40px;
+        border-radius: 13px;
+
+    }
+
+    .login:hover {
+        color: whitesmoke;
+        background-color: gray;
+
+    }
+
+    .column1 {
+        float: left;
+        width: 33.33%;
+        background-color: whitesmoke;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        /* position: fixed; */
+        
+    }
+
+    ul :last-child {
+        color: black;
+        float: inline-end;
+    }
+
+    li a {
+        float: left;
+        width: 100px;
+        text-align: center;
+        color: darkolivegreen;
+        border: 3px white solid;
+        text-decoration: none;
+
+    }
+
+    li a:hover {
+        background-color: gray;
+        color: white;
+    }
+
+    li a {
+        display: inline-block;
+        padding: 8px;
+        background-color: #dddddd;
+    }
+
+    #colornav {
+        color: black;
+    }
+
+    .column2 {
+        float: right;
+        width: 60%;
+
+    }
+
+    .innercolumn {
+        width: 28%;
+        float: left;
+        border-style: inset;
+        height: 300px;
+        margin-left: 10px;
+        padding-left: 10px;
+
+    }
+
+    .btn {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 30px;
+        padding: 12px 24px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .img-box{
+        height: 800px;
+    }
+</style>
+
+
+<body>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">OUR STORY</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><button class="login" onclick="location.href='login.html'">Login account</button></li>
+    </ul>
+    <header style="color: white; background-color: gray; font-size: 100px; text-align: center;">The coffee bar</header>
+
+    <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwYmVhbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            height=100% width=100%>
+    </div>
+    <button class="btn">Join our coffee membership!</button>
+    <hr>
+    <!--Style css to make columns and other stuff-->
+
+
+
+    <div>
+        <div class="column1">
+            <p style="display: inline-block; font-size: 40px; color:olivedrab;padding: 10px;">"Enjoy pure, authentic
+                flavors."</p>
+            <hr>
+            <div style="background-color: white; padding: 30px;">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/5f/29/0e/new-owners-new-logo.jpg"
+                    alt="coffee bar logo" height=70% width=70%>
+                <b style="float: right; ">
+                    Since 2012
+
+                </b>
+            </div>
+        </div>
+        <div class="column2">
+            <p style="font-size: 35px; font-style: italic;">List of our most popular drinks</p>
+            <hr>
+            <div class="innercolumn">
+                <p style="font-size: 20px;font-style: oblique;">
+                    HOT CAPPUCINO
+                    <img src="https://nguyenlieuphache.com/wp-content/uploads/2017/01/2-16.jpg" width=80% height=80%>
+                    <br>
+                    <br>
+                    *pre-roasted
+                </p>
+            </div>
+            <div class="innercolumn">
+                <p style="font-size: 20px;font-style: oblique;">
+                    ITALY ESPRESSO
+                    <img src="https://img.timviecdaubep.com/2020/08/espresso-2.jpg" width=80% height=80%>
+                    <br>
+                    <br>
+                    *pre-roasted
+                </p>
+            </div>
+            <div class="innercolumn">
+                <p style="font-size: 20px;font-style: oblique;">
+                    AMERICANO
+                    <img src="https://i.pinimg.com/originals/83/ef/d0/83efd068bfba9b61b62bb9f51da29a0c.jpg" width=80%
+                        height=80%>
+                    <br>
+                    <br>
+                    *hot/cold brew
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
