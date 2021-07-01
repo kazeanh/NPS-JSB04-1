@@ -1,0 +1,5 @@
+1. hr la the xuong dong co cai gach, con br thi la xuong dong
+2. dung
+3. id la unique, con class thi de goi 1 nhom
+4. c
+5. b

@@ -1,0 +1,15 @@
+ESCAPE ROOM:
+    -ALPHA 0.1:
+        +DATE RELEASE: 25/6/2021
+        +847 LINES OF CODE
+        +IDEA: LÊ BẢO NAM, NGUYÊN TUẤN BÌNH
+        +CODER: NGUYỄN TUẤN BÌNH
+        +THANKS EVERYONE WHO TEST THIS VERSION FOR TESTING THIS VERSION
+_________________________________________________________________________________________________________________
+
+    -ALPHA 0.1.1:
+        +DATE RELEASE: 26/6/2021
+        +847 LINES OF CODE
+        +CODER: NGUYỄN TUẤN BÌNH
+        +THANKS EVERYONE WHO TEST THIS VERSION FOR TESTING THIS VERSION
+        +NEW STUFF: REMOVED STRING GLITCH

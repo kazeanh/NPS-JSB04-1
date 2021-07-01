@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escape room</title>
+</head>
+<body>
+<p id='a'>Imagine you are a student</p>
+<p id='img'><img id='img2' src='student.png' height='400px'></p>
+<p id='b' onclick='next()'>Next</p>
+<!--<iframe id='frame' src='the-test.htm'></iframe>-->
+</body>
+<style>
+body {
+background-color:black;
+}
+#a {
+color:white;
+text-align:center;
+}
+#b {
+text-align:center;
+color:black;
+background-color:white;
+}
+iframe {
+background-color:white;
+width:100%;
+visibility:hidden;
+height:4050px;
+}
+#img {
+text-align:center;
+}
+</style>
+<script>
+let input
+let frame//=document.getElementById('frame')
+let a1=0
+let a=document.getElementById('a')
+let img=document.getElementById('img2')
+let b=document.getElementById('b')
+let data
+let what
+let li
+let li1
+let li2
+let li3
+let li4
+let li5
+let li6
+let a2
+
+window.addEventListener("message", (event) => {
+alert(event.data)
+data=event.data
+frame.remove()
+if (a1===5) {
+a.innerHTML='The crazy teacher opened the door'
+img.src='student6.png'
+a.style.visibility='visible'
+b.innerHTML='Next'
+b.style.visibility='visible'
+} else if (a1===31) {
+what = document.createElement('p')
+what.innerHTML='What will you do?'
+what.style.color='white'
+document.body.appendChild(what)
+li = document.createElement('button')
+li.innerHTML='Wait'
+li.style.color='red'
+li.onclick=function() {
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+b.style.visibility='visible'
+b.innerHTML='Next'
+a.style.visibility='visible'
+a.innerHTML='Not so long after that, there were 2 men came and open the door'
+img.src='student29.png'
+}
+document.body.appendChild(li)
+li1 = document.createElement('button')
+li1.innerHTML='Go out of the room'
+li1.style.color='orange'
+li1.onclick=function () {alert('The door is locked')}
+document.body.appendChild(li1)
+li2 = document.createElement('button')
+li2.innerHTML='Use the phone'
+li2.style.color='blue'
+li2.onclick=function () {
+prompt('Call...')
+alert('You do not have enough money')
+}
+document.body.appendChild(li2)
+}
+img.style.visibility='visible'
+});
+
+function next() {
+a1++
+if (a1===1) {
+a.innerHTML='Once, when you were walking in your school, you were caught by a crazy teacher'
+img.src='student2.png'
+}
+if (a1===2) {
+a.innerHTML='She put you in a dark room'
+img.src='student3.png'
+}
+if (a1===3) {
+a.innerHTML='THE TEACHER:"You have to finish this test correctly to escape this room, or else" and she gave you the test'
+img.src='student4.png'
+}
+if (a1===4) {
+a.innerHTML='She went out of the room and left you alone there'
+b.innerHTML='do the test'
+img.src='student5.png'
+}
+if (a1===5) {
+a.style.visibility='hidden'
+b.style.visibility='hidden'
+frame=document.createElement('iframe')
+document.body.appendChild(frame)
+frame.src='the-test.htm'
+frame.style.visibility='visible'
+document.getElementById('img').style.visibility='hidden'
+}
+if (a1===6) {
+a.innerHTML='THE TEACHER:"What! You have done the test???!!!" and she take the test from you'
+img.src='student7.png'
+}
+if (a1===7) {
+if (data==='wrong') {
+a.innerHTML='THE TEACHER:"WRONGGGGGGGGGGGGGGGGGGGGGGGGGGGG"'
+img.src='student8.png'
+} else if (data==='correct') {
+a.innerHTML='???!!!'
+img.src='student8.png'
+}
+}
+if (a1===8) {
+if (data==='wrong') {
+a.innerHTML='THE TEACHER:"YOU WILL HAVE TO STAY HERE FOREVER"'
+img.src='student4.png'
+} else if (data==='correct') {
+a.innerHTML='The teacher had an heart attack'
+img.style.visibility='hidden'
+img.src='student9.png'
+}
+}
+if (a1===9) {
+if (data==='wrong') {
+alert('HAH, YOU CANNOT ESACAPE THIS ROOM')
+alert('YOU HAVE LOST THE GAME')
+b.style.visibility='hidden'
+} else if (data==='correct') {
+a.innerHTML='You escape the room'
+img.style.visibility='visible'
+}
+}
+if (a1===10) {
+a.innerHTML='You confused. You were sure that outside of the room was the school lobby, but what you saw was a strange room with a door'
+img.src='student10.png'
+}
+if (a1===11) {
+a.innerHTML='The door could just be opened with password and you could only try once'
+img.src='student11.png'
+}
+if (a1===12) {
+a.innerHTML='There is a paper under your foot. It might be the hint for the password'
+img.src='student12.png'
+b.innerHTML='Solve the password'
+}
+if (a1===13) {
+a.style.visibility='hidden'
+b.innerHTML='Next'
+input= document.createElement('input')
+document.body.appendChild(input)
+input.placeholder='Enter the password here'
+}
+if (a1===14) {
+a.style.visibility='visible'
+if (input.value==='4 16 325 65 45') {
+alert('You opened the door')
+input.remove()
+} else {
+alert('Invalid password')
+alert('HAH, YOU CANNOT ESACAPE THIS ROOM')
+alert('YOU HAVE LOST THE GAME')
+b.style.visibility='hidden'
+a.style.visibility='hidden'
+input.remove()
+}
+}
+if (a1===15) {
+a.innerHTML='You entered the room'
+img.src='student13.png'
+}
+if (a1===16) {
+a.innerHTML='You saw 3 doors and a phone'
+img.src='student14.png'
+}
+if (a1===17) {
+a.innerHTML='You opened each door'
+img.src='student15.png'
+}
+if (a1===18) {
+b.style.visibility='hidden'
+what = document.createElement('p')
+what.innerHTML='What will you do?'
+what.style.color='white'
+document.body.appendChild(what)
+li = document.createElement('button')
+li.innerHTML='Go through the first door'
+li.style.color='red'
+li.onclick=function() {
+img.src='student16.png'
+setTimeout(()=> {
+alert('HAH, YOU CANNOT ESACAPE THIS ROOM')
+alert('YOU HAVE LOST THE GAME')
+}, 2000 )
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+}
+document.body.appendChild(li)
+li1 = document.createElement('button')
+li1.innerHTML='Go through the second door'
+li1.style.color='orange'
+li1.onclick=function () {
+img.src='student17.png'
+setTimeout(()=> {
+alert('HAH, YOU CANNOT ESACAPE THIS ROOM')
+alert('YOU HAVE LOST THE GAME')
+}, 2000 )
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+}
+document.body.appendChild(li1)
+li2 = document.createElement('button')
+li2.innerHTML='Go through the third door'
+li2.style.color='blue'
+document.body.appendChild(li2)
+li3 = document.createElement('button')
+li3.innerHTML='Use the phone'
+li3.style.color='purple'
+li3.onclick=function () {
+let call = prompt('Call...')
+if (call==='113') {
+img.src='student18.png'
+li3.remove()
+b.style.visibility='visible'
+a.innerHTML='The polices, no, I mean police came'
+} else {
+alert('You do not have enough money')
+li3.remove()
+}
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+}
+document.body.appendChild(li3)
+}
+if (a1===19) {
+img.src='student19.png'
+a.innerHTML='And you and the police went on the police car'
+}
+if (a1===20) {
+a.innerHTML='But instead of going to your home, the police drove the car to a scary forest'
+img.src='student20.png'
+}
+if (a1===21) {
+a.innerHTML='You realised that he is a fake police, so you ran outta the car'
+img.src='student21.png'
+}
+if (a1===22) {
+a.innerHTML='But the fake police shot you immediately after'
+img.src='student22.png'
+}
+if (a1===23) {
+a.innerHTML='You fainted.'
+img.style.visibility='hidden'
+}
+if (a1===24) {
+a.innerHTML='When you woke up, you saw you was in a room with a computer'
+img.src='student23.png'
+img.style.visibility='visible'
+}
+if (a1===25) {
+a.innerHTML='You opened the computer'
+img.src='student23.png'
+}
+if (a1===26) {
+a.innerHTML='You signed in'
+img.src='student24.png'
+}
+if (a1===27) {
+a.style.visibility='hidden'
+img.src='student25.png'
+}
+if (a1===28) {
+img.src='student26.png'
+}
+if (a1===29) {
+img.src='student27.png'
+}
+if (a1===30) {
+img.src='student28.png'
+b.innerHTML='download the test and do it'
+}
+if (a1===31) {
+img.style.visibility='hidden'
+b.style.visibility='hidden'
+frame=document.createElement('iframe')
+document.body.appendChild(frame)
+frame.src='test2.htm'
+frame.style.visibility='visible'
+frame.style.height='630px'
+}
+if (a1===32) {
+a.innerHTML='THE FIRST MAN: "Hello, I am Robert, and this is my friend David. We are the 2 villagers in the village near this forest. But who are you, why are you here"'
+img.src='student30.png'
+}
+if (a1===33) {
+a.innerHTML='You told him everything'
+}
+if (a1===34) {
+a.innerHTML='DAVID: "Okay so we will take you to the village"'
+}
+if (a1===35) {
+a.innerHTML='While you were walking to the village, you saw a small house with noises'
+img.src='student31.png'
+}
+if (a1===36) {
+a.innerHTML='You entered the house'
+img.src='student32.png'
+}
+if (a1===37) {
+a.innerHTML='You shocked, what you saw is all of your teacher are being tied up'
+img.src='student33.png'
+}
+if (a1===38) {
+a.innerHTML='You also saw a small piece of paper'
+img.src='student34.png'
+}
+if (a1===39) {
+a.style.visibility='hidden'
+img.src='student33.png'
+b.style.visibility='hidden'
+what = document.createElement('p')
+what.innerHTML='Who is the instigator?'
+what.style.color='white'
+document.body.appendChild(what)
+
+li = document.createElement('button')
+li.innerHTML='TEACHER 1'
+li.style.color='red'
+li.onclick=() => {
+img.src='student35.png'
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li)
+
+li1 = document.createElement('button')
+li1.innerHTML='TEACHER 2'
+li1.style.color='orange'
+li1.onclick=()=> {
+img.src='student36.png'
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li1)
+
+li2 = document.createElement('button')
+li2.innerHTML='TEACHER 3'
+li2.style.color='blue'
+li2.onclick=()=> {
+img.src='student37.png'
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li2)
+
+li3 = document.createElement('button')
+li3.innerHTML='TEACHER 4'
+li3.style.color='purple'
+li3.onclick=()=> {
+img.src='student38.png'
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li3)
+
+li4 = document.createElement('button')
+li4.innerHTML='DAVID'
+li4.onclick=()=> {
+img.src='student40.png'
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li4)
+
+li5=document.createElement('button')
+li5.innerHTML='ROBERT'
+li5.style.color='lightred'
+li5.onclick=()=> {
+img.src='student39.png'
+a2=1
+a.innerHTML='YOU: "You are the instigator"'
+b.style.visibility='visible'
+a.style.visibility='visible'
+what.remove()
+li.remove()
+li1.remove()
+li2.remove()
+li3.remove()
+li4.remove()
+li5.remove()
+li6.remove()
+}
+document.body.appendChild(li5)
+
+li6=document.createElement('button')
+li6.innerHTML='YOU'
+li6.style.color='brown'
+li6.onclick=()=> {
+alert("Don't be silly")
+}
+document.body.appendChild(li6)
+
+}
+if (a1===40) {
+if (a2) {
+img.src='student42.png'
+a.innerHTML='ROBERT: "NO!!! I AM NOT THE INSTIGATOR. YOU DO NOT HAVE ANY CLUE!"'
+what=document.createElement('textarea')
+what.placeholder='Clue'
+what.style.height='100px'
+what.style.width='100%'
+what.style.resize='none'
+document.body.appendChild(what)
+} else {
+img.src='student41.png'
+a.innerHTML='YOU: "You are definitely the instigator"'
+}
+}
+if (a1===41) {
+if (a2) {
+if (what.value) {
+what.remove()
+img.src='student43.png'
+a.innerHTML='Robert ran away!!! He is definitely the instigator'
+} else {
+a.innerHTML='ROBERT: "SEE! YOU DO NOT HAVE ANY CLUE TO ACCUSE ME"'
+a1=40
+}
+} else {
+a.innerHTML='The real instigator stabbed a knife into your back. You died'
+img.style.visibility='hidden'
+b.style.visibility='hidden'
+setTimeout(()=> {
+alert('HAH, YOU CANNOT ESACAPE THIS ROOM')
+alert('YOU HAVE LOST THE GAME')
+}, 2000 )
+}
+}
+if (a1===42) {
+a.innerHTML='But unfortunately, i mean, for Robert, David has already called the police'
+img.src='student44.png'
+}
+if (a1===43) {
+a.remove()
+img.src='end.png'
+b.remove()
+}
+}
+</script>

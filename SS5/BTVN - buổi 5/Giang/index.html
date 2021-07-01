@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BÀI TẬP KIỂM TRA</h1>
+    <ol>
+    <li>
+    <p>firstName = Lam, surName = Trần, lastName = Giang</p>
+    <p id="z"></p>
+    <p id="y"></p>
+    <script>
+        var firstName = "Lam"; 
+        var surName = "Trần" ;
+        var lastName = " Giang";
+        var z = surName + lastName;
+        var y = firstName + lastName;
+        console.log(z)
+        console.log(y)
+        document.getElementById("z").innerHTML = z;
+        document.getElementById("y").innerHTML = y;
+    </script>
+    </li>
+    <li>
+    <p>m= 10, n= 3, r = 10/3, display the remainder:</p>
+    <p id="r"></p>
+    <script>
+        var m = 10;
+        var n = 3;
+        var r = x%y;
+        document.getElementById("r").innerHTML = r;
+    </script>
+    </li>
+    <li>
+    <p>String length</p>
+    <script>
+        var str = new String( "String length" );
+        document.write("String length is:" + str.length);
+    </script>
+    </li>
+    <ol>
+</body>
+</html>

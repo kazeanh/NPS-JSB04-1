@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--answer: 10 7 -6 -3 10 12  -->
+<h1>Math test</h1>
+<p>HINT: all the answer + 8</p>
+<h3>(1+1-1+1-1+1-1+1-1+1-1)x10=</h3>
+<input id="1" type="text">
+<h3>9999999999/(9999999999/7)=</h3>
+<input id="2" type="text">
+<h3>(9-1-1-1-1-1-1-1-1-1-1)x6/9/9x9x9=</h3>
+<input id="3" type="text">
+<h3>question 3's answer -999999+999999+3</h3>
+<input id="4" type="text">
+<h3>(10+10^2-10^3+10^4-10^5)/[(10+10^2-10^3+10^4-10^5)/10]</h3>
+<input id="5" type="text">
+<h3>6x2</h3>
+<input type="text" id="6">
+<br>
+<button onclick="check()">Submit</button>
+</body>
+<style>
+    h1 {
+        text-align: center;
+    }
+    button {
+        margin-top: 15px;
+    }
+    p {
+        text-align: center;
+    }
+</style>
+<script>
+    function check() {
+        if (document.getElementById('1').value==='10') {
+            if (document.getElementById('2').value==='7') {
+                if (document.getElementById('3').value==='-6') {
+                    if (document.getElementById('4').value==='-3') {
+                        if (document.getElementById('5').value==='10') {
+                            if (document.getElementById('6').value==='12') {
+                                correct()
+        } else {
+            wrong()
+        }
+        } else {
+            wrong()
+        }
+        } else {
+            wrong()
+        }
+        } else {
+            wrong()
+        }
+        } else {
+            wrong()
+        } 
+        } else {
+            wrong()
+        }
+    }
+    function wrong() {
+        window.parent.postMessage('wrong', '*')
+    }
+    function correct() {
+        window.parent.postMessage('correct', '*')
+    }
+</script>
+</html>
