@@ -10,18 +10,18 @@ const cat = new Object();
 // static method C3:
 // const horse = Object.create();
 
-//  thêm thuộc tính cho object
-const dog = {
-    name: "John",
-    age: 18,
-    address: "HN",
-    sayHello: function () {
-        alert("Gru Gru");
-    }
-}
-dog.boss = "Bình",
-dog.boss = "Hiếu"
+// //  thêm thuộc tính cho object
+// const dog = {
+//     name: "John",
+//     age: 18,
+//     address: "HN",
+//     sayHello: function () {
+//         alert("Gru Gru");
+//     }
+// }
+// dog.boss = "Bình",
+// dog.boss = "Hiếu"
 
-console.log(dog);
-dog.sayHello();
+// console.log(dog);
+// dog.sayHello();
 

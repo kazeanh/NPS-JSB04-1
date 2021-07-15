@@ -77,3 +77,4 @@ sayHello(); // goi ham
     +C3: sử dụng phương thức static
 
 VD: 
+
