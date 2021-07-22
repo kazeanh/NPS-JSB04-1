@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN</title>
+</head>
+
+<body>
+    <h1 style="color: red;font-size: 450px;margin: 0px;">Open the console please
+    </h1>
+</body>
+<script>
+    let n = prompt('Nhập số phần tử trong mảng')
+    console.log('Mảng số nguyên bạn vừa nhập (thực ra là bạn chỉ nhập số phần tử):')
+    let arr = []
+    for (var i = 0; i < n; i++) {
+        let value = Math.floor(Math.random() * (100 - 0 + 1)) + 0
+        let a = Math.floor(Math.random() * 3)
+        if (a == 2) {
+            value = 0 - value
+        }
+        arr.push(value)
+    }
+    console.log(arr)
+    //1
+    let plus = 0
+    let b = 0
+    for (var i1 = -1; i1 < arr.length; i1++) {
+        if (i1 % 2 == 0) {
+            if (arr[i1] % 2 == 1) {
+                plus += arr[i1]
+                b++
+            }
+        }
+    }
+    plus /= b
+    console.log('Trung bình cộng các số lẻ ở vị trí chẵn:', plus)
+    //2
+    console.log('Số lớn nhất trong mảng là:', Math.max(...arr))
+    //3
+    console.log('Số lớn nhất trong mảng là:', Math.min(...arr))
+    //4
+    let acp = []
+    for (var i2 = -1; i2 < arr.length; i2++) {
+        scp(arr[i2])
+    }
+    function scp(a) {
+        // Ta dùng hàm Math.sqrt để lấy căn bậc 2
+        // sau đó chia lấy dư với 1, nếu bằng 0 thì là số chính phương, 
+        // ngược lại thì không phải là số chính phương
+        if (Math.sqrt(a) % 1 == 0) {
+            acp.push(a)
+        }
+    }
+    console.log('Các số chính phương có trong mảng là:', acp)
+    //5
+    let list = []
+    f()
+    function f() {
+        let a = 0
+        for (arr[a]; a + 1 < arr.length; a++) {
+            k(arr[a])
+        }
+        function k(n) {
+            // Biến cờ hiệu
+            let flag = true;
+
+            // Nếu n bé hơn 2 tức là không phải số nguyên tố
+            if (n < 2) {
+                flag = false;
+            }
+            else {
+                // lặp từ 2 tới n-1
+                for (let i = 2; i < n - 1; i++) {
+                    if (n % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+
+            // Kiểm tra biến flag
+            if (flag == true) {
+                list.push(n)
+            }
+        }
+    }
+    console.log('Các số nguyên tố có trong mảng:', list)
+    //6
+    let b1
+    for (b1 = 0; b1 + 1 < arr.length; b1++) {
+        if (arr[b1 + 1] < 0) {
+            arr[b1 + 1] = 0
+        }
+    }
+    console.log('Sau khi đổi các phần tử âm thành 0, mảng mới là:', arr)
+    //7
+    let b2
+    for (b2 = 0; b2 < arr.length; b2++) {
+        if (arr[b2] < 0) {
+            arr.splice(b2, 1)
+        }
+    }
+    console.log('Sau khi xóa đi các phần tử âm trong mảng, mảng mới là:', arr)
+    //8
+    arr.sort(function(a, b){return a - b});
+    console.log('Mảng mới sau khi sắp xếp mảng với thư tự tăng dần là:',arr)
+</script>
+
+</html>

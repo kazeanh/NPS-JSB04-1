@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //1
+    console.log('Bài 1');
+    let user = {}
+    user.name = 'David'
+    user.surname = 'Xuan'
+    user.name = 'Cafedev'
+    delete user.name
+    console.log('Object user: ', user);
+    //2
+    console.log('Bài 2');
+    let schedule = {};
+    alert(isEmpty(schedule)); // true
+    schedule["8:30"] = "get up";
+    alert(isEmpty(schedule)); // false
+    isEmpty(schedule)
+    function isEmpty(obj) {
+        if (Object.keys(obj).length > 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+    //3
+    console.log('Bài 3');
+    let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+    }
+    let toorng = 0
+    for (let i = 0; i < Object.keys(salaries).length; i++) {
+        toorng += salaries[Object.keys(salaries)[i]]
+    }
+    console.log('Tổng số tiền là: ',toorng);
+    //4
+    console.log('Bài 4');
+    let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu cafedev"
+    };
+    multiplyNumeric(menu);
+    function multiplyNumeric(obj) {
+        for (let i = 0; i < Object.keys(obj).length; i++) {
+            if (typeof (obj[Object.keys(obj)[i]]) === 'number') {
+                obj[Object.keys(obj)[i]] *= 2
+            }
+        }
+    }
+    console.log(menu);
+    //5
+    console.log('Bài 5');
+    function makeUser() {
+        return {
+            name: "David",
+            ref: this
+        };
+    }
+    let user1 = makeUser();
+    console.log(user1.ref.name);
+    console.log('Kết quả của việc truy cập ref của nó là Global object là Window');
+    //6
+    console.log('Bài 6');
+    //7
+    console.log('Bài 7');
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+        },
+        down() {
+            this.step--;
+        },
+        showStep: function () { // shows the current step
+            console.log(this.step);
+        }
+    };
+    ladder.up();
+    ladder.up();
+    ladder.down();
+    ladder.showStep()
+</script>
+
+</html>

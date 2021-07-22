@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <h1 id="main-content" class="h1"></h1> -->
+
+    <!-- <input type="button" name='welcome' onclick="alert('Welcome to js')"> -->
+    <!-- <script>
+        // Truy van toi the h1
+        document.getElementById("main-content")
+            .innerHTML = "Chào mừng các em tới thế giới này";
+
+        // ví dụ đổi màu thẻ h1
+        document.getElementById("main-content").style.color = "red"
+    </script> -->
+    <!-- 
+     <script>
+         let ten,tuoi;
+         ten = prompt("Bạn hãy nhập vào tên");
+         tuoi = prompt("Nhập vào tuổi", 20);
+         document.write("Chao ban: <b>" + ten + "</b>")
+         document.write("<br>"); // xuong dong
+        document.write("Tuoi cua ban la: <u>"+ tuoi+ "</u>")
+     </script> -->
+
+
+    <!-- vd2: Tạo 1 button có tên là welcome, value = "welcome".
+         1 text box có tên là msg, value ="Welcome to"  -->
+    <script>
+        // document.write("tao button va text = script <br>")
+        // document.write("<br>");
+        // document.write("<input type=button name=welcome value='Welcome'  onclick='alert('Welcome to js')'>");
+        // document.write("onclick='alert(Welcome to JS);'/>");
+    </script>
+
+
+    <!-- vd3 -->
+    <!-- <input type="button" name="welcome" value="Welcome" onclick="HienThi()">
+    <input id="change" type="text" name="msg" value="Welcome to JS" size="30">
+
+    <script>
+        function HienThi(){
+            document.getElementById("change").value = 'This value has been change'
+        }
+    </script> -->
+
+
+    <form id="info">
+        <div>
+            <input type="text" name="name" placeholder="Nhap vao ten">
+            <input type="text" name="age" placeholder="Nhap vao tuoi">
+        </div>
+        <input type="text" name="sex" placeholder="Giới tính">
+        <input type="radio" name="sex" value="Nam">
+        <input type="radio" name="sex" value="Nữ">
+        <div style="display: flex; flex-direction: column; width: fit-content;">
+            <input type="text" name="email" placeholder="Nhap vao email">
+            <input type="password" name="password" placeholder="Nhap vao password">
+        </div>
+
+        <button type="submit">Sign-up</button>
+    </form>
+
+    <script>
+        //  lam the nao de khi bam vao nut dang ky thi minh nhan dc noi dung nguoi dung dien vao
+        const form = document.getElementById("info");
+        form.addEventListener("submit",function(event){
+            event.preventDefault(); // ngăn sự kiện load lại trang của web
+            const data={
+                name: form.name.value,
+                age: form.age.value,
+                sex: form.sex.value,
+                email: form.email.value,
+                password: form.password.value
+            }
+            console.log(data);
+        }); // them su kien gi do
+
+    </script>
+
+
+</body>
+
+</html>

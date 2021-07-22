@@ -7,6 +7,7 @@
 // constructor C2:
 const cat = new Object();
 
+
 // static method C3:
 // const horse = Object.create();
 
@@ -25,3 +26,7 @@ const cat = new Object();
 // console.log(dog);
 // dog.sayHello();
 
+let dem =1;
+function createVariable(){
+    
+}
