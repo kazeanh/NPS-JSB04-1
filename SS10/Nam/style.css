@@ -1,0 +1,32 @@
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.Small{
+    display: flex;
+    justify-content: center;
+    font-size: 90%;
+    margin: 20px 0px;
+}
+.Khung{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: outset 1px gray;
+    border-radius: 5px;
+    padding: 40px;
+    background-color: cyan;
+}
+input{
+    size: 50%;
+    margin: 5px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}

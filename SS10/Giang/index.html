@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS10</title>
+</head>
+<style>
+    .dad{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #div1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #div2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #form1{
+        width: 200px;
+        height: 300px;
+        margin: 60px auto;
+        background: rgb(251, 243, 195);
+        padding: 60px 120px 80px 120px;
+        text-align: center;
+        -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    }
+    #form2{
+        width: 200px;
+        height: 300px;
+        margin: 60px auto;
+        background: rgb(214, 197, 240);
+        padding: 60px 120px 80px 120px;
+        text-align: center;
+        -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    }
+    #h1{
+        color: rgb(172, 127, 243);
+        display: flex;
+        justify-content: center;
+    }
+    #h2{
+        color: rgb(252, 230, 105);
+        display: inline-block;
+        display: flex;
+    }
+    a{
+        color: rgb(172, 127, 243);
+    }
+    p{
+        color: rgb(252, 230, 105);
+    }
+    .input{
+        width: 200px;
+        padding: 10px;
+        border: rgb(172, 127, 243) solid 1px;
+        outline: none;
+        background-color: transparent;
+    }
+    #button1{
+        display: inline-block;
+        padding: 12px 24px;
+        background: rgb(252, 230, 105);
+        font-weight: bold;
+        color: rgb(172, 127, 243);
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: ease .3s;
+    }
+    #button1:hover{
+        background: rgb(172, 127, 243);
+        color: rgb(252, 230, 105);
+    }
+    #button2{
+        display: inline-block;
+        padding: 12px 24px;
+        background: rgb(172, 127, 243);
+        font-weight: bold;
+        color: rgb(252, 230, 105);
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: ease .3s;
+    }
+    #button2:hover{
+        background: rgb(252, 230, 105);
+        color: rgb(172, 127, 243);
+    }
+</style>
+<body>
+    <div class="dad">
+    <div id="div1">
+    <form id="form1">
+        <h1 id="h1">Sign in</h1>
+        <input class="input" type="text" placeholder="Email" required>
+        <br><br>
+        <input class="input" type="password" placeholder="Password" required>
+        <br><br>
+        <a href="#">Forgot your password?</a>
+        <br><br>
+        <button id="button1" value="submit">SIGN IN</button>
+    </form>
+    </div>
+    <div id="div2">
+    <form id="form2">
+        <h1 id="h2">Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us!</p>
+        <button id="button2" value="submit">SIGN UP</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

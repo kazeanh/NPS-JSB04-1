@@ -1,0 +1,15 @@
+body {
+    background-image: url(https://wallpaperaccess.com/full/2825826.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+}
+
+table {
+padding-left: 35%;
+padding-top: 15%;
+}

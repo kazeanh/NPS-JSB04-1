@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Khung">
+            <h1 style="display:flex;justify-content: center;">Sign In</h1>
+            <div class="Small">or use your account</div>
+            <form class="info" style="size: 20px;">
+                <input type="text" name="inemail" placeholder="Email" size="20px">
+                <input type="password" name="inpassword" placeholder="Password" size="20px">
+            </form> 
+            <div class="Small">forgot your password</div>
+            <button onclick="inDuLieuSignIn()">Sign In</button>
+        </div>
+        <div class="Khung">
+            <h1>Create account</h1>
+            <div class="Small">or use your Email for registration</div>
+            <form class="info" style="size: 20px;">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+            </form> 
+            <button style="margin-top: 20px;" onclick="inDuLieu()">Sign Up</button>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementsByClassName("info");
+        function inDuLieu(){
+            const data1={
+                name:form[1].name.value,
+                email:form[1].email.value,
+                password:form[1].password.value,
+            }
+            console.log(data1)
+        }
+        function inDuLieuSignIn(){
+            const data={
+                email:form[0].inemail.value,
+                password:form[0].inpassword.value,
+            }
+            console.log(data)
+        }
+    </script>
+</body>
+</html>
