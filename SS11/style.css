@@ -22,11 +22,15 @@ h1{
 }
 
 h2{
-
+    text-align: center;
 }
 
 p{
-
+    font-size: 14px;
+    font-weight: 100;
+    line-height:20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
 }
 
 span{
@@ -53,10 +57,18 @@ button{
     transition: transform 80ms ease-in;
 }
 
-button:active{}
+button:active{
+    transform: scale(0.95);
+}
 
-button:focus{}
-button.ghost{}
+button:focus{
+    outline: none;
+}
+
+button.ghost{
+    background-color: transparent;
+    border-color: #ffffff;
+}
 
 form{
     background-color: #FFFFFF;
@@ -104,6 +116,12 @@ input{
 }
 
 /* transform */
+.container.right-panel-active .sign-in-container{
+    transform: translateX(100%);
+}
+
+
+
 
 .sign-up-container {
     left: 0;
@@ -112,6 +130,35 @@ input{
     /* Thuộc tính làm mờ: về 0 -> mờ đi. Về 1 => nét hơn */
     z-index: 1;
 }
+
+.container.right-panel-active .sign-up-container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+.overlay-container{
+    position: absolute;
+    top:0px;
+    left: 50%;
+    width: 50%;
+    height:100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+
+.overlay{
+    background-color:#FF416C;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+
+
 
 /* social-container */
 
