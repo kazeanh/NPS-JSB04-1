@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
     <h2>Challenge: Sign in/Up Form</h2>
-    <div class="container" id="containter">
+    <div class="container" id="container">
         <!-- container: để bọc khối toàn bộ -->
         <div class="form-container sign-up-container">
             <form action="">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="" class="social"><i class="fab fa-facebook"></i></a>
-                    <a href="" class="social"><i class="fab fa-facebook"></i></a>
-                    <a href="" class="social"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or your email for registration</span>
                 <input type="text" placeholder="Name">
@@ -35,7 +36,7 @@
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="" class="social"><i class="fab fa-facebook"></i></a>
-                    <a href="" class="social"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
                     <a href="" class="social"><i class="fab fa-facebook"></i></a>
                 </div>
                 <span>or use your account</span>
@@ -51,7 +52,7 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signUp">Sign In</button>
+                    <button class="ghost" id="signIn">Sign In</button>
                 </div>
 
                 <!-- ngan cach -->
@@ -66,6 +67,21 @@
 
 
     </div>
+
+    <script>
+        const signUpButton = document.getElementById("signUp")
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById("container")
+
+        signUpButton.addEventListener("click", () => {
+            console.log("hello");
+            container.classList.add("right-panel-active");
+        })
+
+        signInButton.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
+        })
+    </script>
 </body>
 
 </html>
