@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./btvn.css">
+</head>
+<body>
+    <div class="container">
+        <div class="picture">
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Emblem_of_Vietnam.svg/250px-Emblem_of_Vietnam.svg.png" style="height: 100px; width: 100px;"></div>
+            <img id="preview">
+            <label for="file" id="label">Click To Select Image</label>
+            <input type="file" id="file" accept=".jpg, .jpeg, .png" onchange="showPreviewOne(event);">
+            <div>Có giá trị đến: 12/12/2028</div>
+        </div>
+        <div class="nonpic">
+            <div class="slogan">
+                <div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b></div>
+                <div><u>Độc lập - Tự do - Hạnh phúc</u></div>
+                <div><b>CĂN CƯỚC CÔNG DÂN</b></div>
+            </div>
+            <form class="form">
+                <div onclick="nhapSo()" id="number">Số Chứng Minh Thư: </div>
+                <div onclick="nhapTen()" id="name">Họ Và Tên: </div>
+                <div onclick="nhapNgaySinh()" id="birthday">Ngày, Tháng, Năm Sinh: </div>
+                <div onclick="nhapGioiTinh()" id="gender">Giới Tính: </div>
+                <div onclick="nhapQuocTich()" id="nationality">Quốc Tịch: </div>
+                <div onclick="nhapQue()" id="hometown">Quê Quán: </div>
+                <div onclick="nhapDiaChi()" id="address">Nơi Thường Trú: </div>
+            </form>
+        </div>
+    </div>
+    <script src="./btvn.js"></script>
+</body>
+</html>

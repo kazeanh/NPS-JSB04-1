@@ -1,0 +1,23 @@
+ESCAPE ROOM VERSIONS:
+    -VERSION 0.1:
+        +DATE RELEASE: 25/6/2021
+        +CODER: NGUYỄN TUẤN BÌNH
+_________________________________________________________________________________________________________________
+
+    -VERSION 0.1.1:
+        +DATE RELEASE: 26/6/2021
+        +CODER: NGUYỄN TUẤN BÌNH
+        +NEW STUFF: REMOVED STRING GLITCH (the-test.htm, line 99)
+_________________________________________________________________________________________________________________
+
+    -VERSION 0.1.1 dev:
+        +DATE RELEASE: 8/7/2021
+        +CODER: NGUYỄN TUẤN BÌNH
+        +NEW STUFF: REARRANGE THE CODE (STRONGLY RECOMMENDED TO VIEW THE CODE)
+_________________________________________________________________________________________________________________
+
+    -VERSION 0.1.2:
+        +DATE RELEASE:
+        +CODER: NGUYỄN TUẤN BÌNH
+        +NEW STUFF:
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btvn</title>
+</head>
+
+<body>
+    <div id="card">
+        <div class="one">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Emblem_of_Vietnam.svg/375px-Emblem_of_Vietnam.svg.png"
+                width="75">
+            <div>
+                <h3>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+                <u>Độc lập-Tự do-Hạnh Phúc</u>
+                <h3 style="color: rgb(199, 0, 0);">CĂN CƯỚC CÔNG DÂN</h3>
+                <p class="p" onclick="cmt()">Số: </p>
+            </div>
+        </div>
+        <div class="one">
+            <div style="width:100px;height: 100px;background-color: white;">
+                <img id='img'>
+            </div>
+            <div>
+                <p class="p" onclick="name()">Họ và tên: </p>
+                <p class="p" onclick="born()">Ngày tháng năm sinh: </p>
+                <p class="p" onclick="gender()">Giới tính: </p>
+                <p class="p" onclick="qt()">Quốc tịch: </p>
+                <p class="p" onclick="house()">Quê quán: </p>
+                <p class="p" onclick="live()">Nơi trường trú: </p>
+            </div>
+        </div>
+        <br>
+        <div class="strong">
+            <strong>Có giá trị đến: 31/12/999999999999999999999999</strong>
+        </div>
+    </div>
+    <br>
+    <input type="file" name="" id="imgfile" accept="image/*" onchange="updateImg()">
+</body>
+<script>
+    let p = document.getElementsByClassName('p')
+
+    function cmt(){
+        p[0].innerHTML+=prompt('Điền số cmt')
+    }
+    function name(){
+        p[1].innerHTML+=prompt('Điền họ và tên')
+    }
+    function born(){
+        p[2].innerHTML+=prompt('Điền ngày tháng năm sinh')
+    }
+    function gender(){
+        p[3].innerHTML+=prompt('Điền giới tính')
+    }
+    function qt(){
+        p[4].innerHTML+=prompt('Điền quốc tịch')
+    }
+    function house(){
+        p[5].innerHTML+=prompt('Điền quê quán')
+    }
+    function live(){
+        p[6].innerHTML+=prompt('Điền nơi thường trú')
+    }
+    
+    function updateImg() {
+        document.getElementById('img').src = document.getElementById('imgfile')
+    }
+</script>
+<style>
+    .strong {
+        text-align: left;
+    }
+
+    #img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .p {
+        color: rgb(47, 73, 153);
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #card {
+        text-align: center;
+        background-color: rgb(97, 126, 212);
+        display: inline-block;
+    }
+
+    .one {
+        display: flex;
+    }
+</style>
+
+
+</html>
