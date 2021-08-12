@@ -12,3 +12,8 @@ function changeHandler(events){
     }
     fileReader.readAsDataURL(file);
 }
+
+function edit1(){
+    let a = prompt("Nhập vào họ và tên:");
+    document.getElementById("name").innerText = "Họ và tên: " + a;
+}

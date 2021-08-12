@@ -11,7 +11,12 @@
             display: flex;
             flex-direction: row;
             background-color: rgb(20, 88, 133);
+            width: fit-content;
+          
         }
+        /* .box div:nth-child(2){
+            padding: 0px 30px;
+        } */
 
         .img-box {
             display: flex;
@@ -64,7 +69,7 @@
             <p class="auto"><u>Độc lập - Tự do - Hạnh phúc</u></p>
             <p class="auto" style="color: red;"><b>Căn cước công dân</b></p>
             <p class="blue auto">Số:</p>
-            <div class="blue">
+            <div class="blue" id="name" onclick="edit1()">
                 Họ và tên:
             </div>
             <br>
