@@ -10,6 +10,7 @@
         .box {
             display: flex;
             flex-direction: row;
+            background-color: rgb(20, 88, 133);
         }
 
         .img-box {
@@ -17,8 +18,26 @@
             flex-direction: column;
             height: 270px;
         }
-        .img-box div:nth-child(2){
+
+        .img-box div:nth-child(2) {
             margin-top: 5px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .blue{
+            color: rgb(124, 195, 243);
+        }
+
+        .auto{
+            text-align: center;
+
+        }
+        .national{
+            display: flex;
+            justify-content:space-around;
         }
     </style>
 </head>
@@ -35,23 +54,35 @@
                     height="150px" width="110px" alt="">
             </div>
             <div>
-                <b>Có giá trị đến</b>
+                <b style="font-size: 10px;">Có giá trị đến</b>
             </div>
         </div>
 
 
         <div>
             <p><b>Cộng hòa xã hội chủ nghĩa Việt Nam</b></p>
-            <p><b>Độc lập - Tự do - Hạnh phúc</b></p>
-            <p><b>Căn cước công dân</b></p>
-            <p>Số:</p>
-            <div>
+            <p class="auto"><u>Độc lập - Tự do - Hạnh phúc</u></p>
+            <p class="auto" style="color: red;"><b>Căn cước công dân</b></p>
+            <p class="blue auto">Số:</p>
+            <div class="blue">
                 Họ và tên:
             </div>
             <br>
-            <p>Ngày, tháng, năm sinh: </p>
+            <p class="blue">Ngày, tháng, năm sinh: </p>
+            <div class="national">
+                <p class="blue">Giới tính:</p>
+                <p class="blue">Quốc tịch:</p>
+            </div>
+            <p class="blue">Quê quán: </p>
+            <p class="blue">Nơi thường trú:</p>
         </div>
     </div>
+
+
+    <div>
+        <input type="file" onchange="changeHandler(event)">
+    </div>
+    <script src="./cmnd.js"></script>
 </body>
 
 </html>
