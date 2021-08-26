@@ -24,6 +24,11 @@ image_input.addEventListener('change', function () {
     uploaded_image = reader.result; // this is link anh duoc convert sang base 64
     console.log(uploaded_image); // convert sang  base 64
 
+    const object ={
+      url: uploaded_image,
+      index: images.length
+    }
+    images.push(object)
     // tạo ra 1 thẻ div có class là img-box
     const imgBox = document.createElement("div");
     imgBox.classList = "img-box";
@@ -34,7 +39,6 @@ image_input.addEventListener('change', function () {
     const img = document.createElement("img");
     img.classList = 'img';
     // Xac dinh vi tri cua the img moi tao nay
-
 
     // nem link anh: uploaded_image vao thuoc tinh scr cua img
     img.src = uploaded_image;
