@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif,'Popins' ;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+
+
+}
+header .logo{
+    color:black;
+    font-weight: 700;
+    text-decoration:none ;
+    font-size: 2em;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    
+
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: rgb(12, 10, 10);
+    border-radius: 20px ;
+}
+header ul li a:hover,
+header ul li a.active{
+    background: white;
+    color: #2b1025;
+
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+section ::before{
+    content: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#1c0522,rgb(243, 239, 239),transparent) ;
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img #video_game{
+ mix-blend-mode: screen;
+}
+#text{
+    position: absolute;
+    color: rgb(240, 233, 233);
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    transform: translateY(-100px);
+}
+
+    
+.sec{
+    position: relative;
+    padding: 100px;
+    background: white;
+    
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+.sec p{
+    font-size: 1em;
+    color: black;
+}
+.sec img{
+    width: 100%;
+    height: 100%;
+}
+#video{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 8px;
+
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  
+  .mySlides {
+    display: none;
+  }
+  
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+  
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+ 
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  #footer{
+    box-sizing: border-box;
+    margin-right: px;
+    margin-left: px;
+    padding: 15px 0;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #1f1a22;
+    color: #bcb4c1;
+    margin-top: auto;
+  
+  }
+ .post-navigation{
+  overflow: visible;
+  padding:  10px;
+  }
+ 
