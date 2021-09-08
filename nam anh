@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  
+</head>
+<body>
+    <header>
+        <a href="#" class="logo" >Genshin Impact</a>
+        <ul>
+            <li><a href="" class="active">Download</a></li>
+            <li><a href="#">About</a></li>
+            
+        </ul>
+    </header>
+    <section>
+        <img src="https://get.wallhere.com/photo/Genshin-Impact-anime-Raijuu-Bakanara-Video-Game-Art-1798239.jpg" id="video_game">
+        <h3 id="text">Step Into The Fantasy</h3>
+      
+    </section>
+
+    <div class="sec">
+        
+        <h2>Summerise</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis error autem fugit, non fuga laboriosam, 
+            asperiores quo dolores, sequi repellat iusto vel molestias vitae iste vero unde maiores! Qui, eligendi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto iste minima quae consequuntur, provident dolores consectetur, laborum doloremque voluptatibus eveniet dolor corrupti 
+        quaerat impedit voluptas alias. Unde, sed consectetur.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nihil error officiis praesentium eos ex aspernatur temporibus rerum. Eos autem, maxime ducimus mod
+    i nihil dolorum quaerat hic officia consectetur sunt! <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quas obcaecati repellendus culpa cum quidem praesentium dolores soluta qui consequuntur. S
+    equi excepturi ducimus iusto fugiat facilis voluptatibus dolorum aspernatur similique! </p>
+    <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit at quidem, verit
+    atis accusamus labore. Placeat corrupti porro sed, unde voluptatem nam minus officia iste rerum doloribus quaerat esse ab?
+    </div>
+
+
+    <div id="video" >
+        <div id="video">
+            <iframe width="765" height="443" src="https://www.youtube.com/embed/SO__VQZirJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <iframe width="765" height="443" src="https://www.youtube.com/embed/dn8etqEPtFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+
+
+    <div class="slideshow-container">
+
+      
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-9/220468247_976175783194764_6414152964844421969_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=HXOIfn5x4qkAX9XIyvS&_nc_oc=AQlri0omWJv33BN1whdEmzXdKN-W58Ee542n-6Oj_sP_N-KX8LQQfFrDdXiOVYWsHbM&_nc_ht=scontent.fhan2-3.fna&oh=3eb552d84ef6b9033c9494d50e2288a1&oe=615309EA" style="width:100%">
+         
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.6435-9/221293845_976170593195283_7950368163459312004_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=RysCfJMKQoIAX9WZpMT&_nc_ht=scontent.fhan2-2.fna&oh=f8d105a011ec3ee4040a464644fcddbb&oe=61508CE2" style="width:100%">
+         
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.6435-9/220236811_976165156529160_8730376783181517155_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=xA26ty9LRqsAX_5zdWG&_nc_ht=scontent.fhan2-4.fna&oh=9cdcf6b27f863968094fd345357a3d4d&oe=61521F5A" style="width:100%">
+       
+        </div>
+      
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+   
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
+
+
+
+
+<div class="entry-content read-details">
+
+<p><strong>— TẢI GAME</strong></p>
+
+</pre>
+<p><strong>— LƯU Ý KHI CÀI ĐẶT</strong></p>
+<pre>1. Mount/Giải nén file
+2. Cài Setup.exe
+3. Chép CRACK
+4. Play game!
+</pre>
+<p><strong>— CẤU HÌNH TỐI THIỂU</strong></p>
+<pre><strong>MINIMUM:</strong>
+Hệ điều hành: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1
+Vi xử lý: Intel Core 2 Duo E8200 @ 2.66 GHz hoặc AMD Phenom X3 8750
+RAM: 2 GB
+Ổ đĩa cài đặt trống: 7 GB
+Card video: GeForce series 8800 GT với 512 MB RAM</pre>
+<p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nobis sed error necessitatibus, quis doloribus nisi dolorem quam consequuntur, illo cumque, reprehenderit accusamus excepturi explicabo quod corrupti id aut blanditiis?.</p>
+<p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quasi asperiores saepe adipisci nostrum facilis beatae consectetur eligendi magnam eos, ducimus mollitia quisquam sunt enim. Assumenda nihil facere perspiciatis itaque.</p>
+<p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsa commodi porro maiores perferendis dignissimos nostrum non hic accusamus. Nisi excepturi cumque quasi maxime perspiciatis fugit nesciunt enim. Aliquam, neque.</p>
+                  <div class="post-item-metadata entry-meta">
+      
+                  </div>
+              
+<nav class="navigation post-navigation" role="navigation" aria-label="Continue Reading">
+    <h2 class="screen-reader-text">Continue Reading</h2>
+      <div class="nav-links"><div class="nav-previous"><a href="https://fullcrackpc.com/kingdom-rush-origins/" rel="prev">
+         <span class="em-post-navigation">Previous</span> Kingdom Rush Origins</a>
+      </div>
+                            <div class="nav-next">
+                                <a href="https://fullcrackpc.com/townsmen-a-kingdom-rebuilt/" rel="next">
+                                  <span class="em-post-navigation">Next</span> Townsmen – A Kingdom Rebuilt</a>
+                                </div>
+                              </div>
+                          </nav>
+
+
+    
+
+      <div id="footer" class="row default-footer">
+        <div class="copyright-developer">
+          <div id="copyright">
+            <p> Genshin Impact™ is a registered trademark of MiHoYo Co., Ltd.</p>
+            <p> This website is made for educational and research purpose (and me, eating pizza). Images and data ©MiHoYo Co., Ltd.</p>
+            <p> Country flag icons are subject of free 
+              <a href="https://www.flaticon.com/packs/international-flags">Flaticon</a> license, made by 
+              <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+            </p>
+            <p>© 2021 Honey Impact - Genshin Impact DB and Tools.</p>
+            <p>
+              <a href="https://genshin.honeyhunterworld.com/privacy-policy/"> Privacy</a>
+            </p>
+             <span data-ccpa-link="1"></span>
+            </div>
+            <div id="developer">
+              <p> Made with <i class="fa fa-heart"></i> by <a href="https://www.graphene-theme.com/" rel="nofollow">Graphene Themes</a>.
+              </p>
+      </div>
+    </div>
+
+ 
+     
+ 
+   
+</body>
+</html>
